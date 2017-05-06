@@ -1,0 +1,20 @@
+<?php
+	ini_set('display_errors', 1);
+	require_once dirname(__FILE__)."/include/smarty.php";
+	require_once dirname(__FILE__)."/php/sesion.php";
+	if(!isset($_POST['s'])){	
+		$sql="SELECT * from marca";//consulta 
+		$aMarcas= $db->GetAll($sql);
+		$oSmarty->assign('marca',$aMarcas);
+		$oSmarty->display('editar.html.tpl');
+	}else{
+	$sql="insert into producto(Vnombre_producto,Vdescripcion_producto,Iexistencia_producto,id_marca) values(0,'".$_POST["nombre"]."','".$_POST["descripcion"]."','".$_POST["cantidad"]."','".$_POST["marca"]."')";//consulta 
+	$aReg= $db->execute($sql);
+	if($aReg){
+		 header ("Location: product.php"); 
+	}else{
+		echo "no";
+		echo $sql;
+	}
+}
+?>

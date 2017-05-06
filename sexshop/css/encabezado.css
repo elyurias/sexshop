@@ -1,0 +1,13 @@
+.encabezado{
+	 #background-color:pink;
+}
+.error{
+	background-color:red;
+	text-align: center;
+	color:rgba(210,122,212);
+}
+.caja{
+	background-color: rgba(20, 23, 32, 1); 
+	color: rgba(20, 23, 32, 1);
+	text-align: center;
+}

@@ -1,0 +1,3 @@
+<link rel = 'stylesheet' href="boots/css/bootstrap.min.css">
+<script type="text/javascript" language="javascript" src="class/media/js/jquery.js"></script>
+<script src = "boots/js/bootstrap.min.js"></script>
