@@ -25,8 +25,15 @@
 				</section>
 			<h3>Direccion</h3>
 				<section>
-				<div class='row'>
-				</div>
+				<table>
+					<tr><td>Direccion:</td><td><input type='text' name='direccion' /></td><td></td><td></td></tr>
+					<tr><td>Codigo Postal:</td><td><input type='text' name='cp' /></td><td></td><td></td></tr>
+					
+					<tr><td>Pais:</td><td>{}</td><td></td><td></td></tr>
+					<tr><td>Estado:</td><td>{}</td><td></td><td></td></tr>
+					<tr><td>Minicipio:</td><td>{}</td><td></td><td></td></tr>
+				
+				</table>
 				</section>
 			<h3>Crear password</h3>
 				<section>
