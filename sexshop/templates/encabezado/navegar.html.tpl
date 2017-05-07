@@ -24,7 +24,7 @@
       		<a class="nav-item nav-link" href="php/login/logout.php">Cerrar Sesion</a>
 	{else}
       	        <a class="nav-item nav-link" href="login.php">Inicio de Sesion</a>
-        {/if}
+    {/if}
 	<a class="nav-item nav-link" href="index.php">Pagina de Inicio</a>
       		<a class="nav-item nav-link" href="product.php">Productos</a>
 	{if $es eq 'op'}

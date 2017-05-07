@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-05-06 17:01:05
+/* Smarty version 3.1.30, created on 2017-05-06 20:19:24
   from "/var/www/html/repoGit/sexshop/sexshop/templates/encabezado/navegar.html.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_590e47a1e20555_93508470',
+  'unifunc' => 'content_590e761c90a262_96389755',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4036723add2e5df219baf495c4d2010546a90f34' => 
     array (
       0 => '/var/www/html/repoGit/sexshop/sexshop/templates/encabezado/navegar.html.tpl',
-      1 => 1494062496,
+      1 => 1494119837,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_590e47a1e20555_93508470 (Smarty_Internal_Template $_smarty_tpl) {
+function content_590e761c90a262_96389755 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class='row'>
 					<article class="col-lg-3 col-md-4 col-sm-12 caja">
@@ -48,7 +48,7 @@ function content_590e47a1e20555_93508470 (Smarty_Internal_Template $_smarty_tpl)
       		<a class="nav-item nav-link" href="php/login/logout.php">Cerrar Sesion</a>
 	<?php } else { ?>
       	        <a class="nav-item nav-link" href="login.php">Inicio de Sesion</a>
-        <?php }?>
+    <?php }?>
 	<a class="nav-item nav-link" href="index.php">Pagina de Inicio</a>
       		<a class="nav-item nav-link" href="product.php">Productos</a>
 	<?php if ($_smarty_tpl->tpl_vars['es']->value == 'op') {?>
