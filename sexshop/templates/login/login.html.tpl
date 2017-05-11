@@ -5,17 +5,8 @@
 		{include file="encabezado/bootstrap.html.tpl"}
 	</head>
 	<body>
+		{include file='encabezado/encabezado.html.tpl'}
 		<div class='container-fluid'>
-		<section class='row encabezado'>
-			<article class="col-lg-3 col-md-3 col-sm-2">
-				<a href="index.php"><img src="img/logo.jpg" WIDTH=100 HEIGHT=100 ALT="sexshop" align='center'></a>
-			</article>
-			<article class="col-lg-9 col-md-9 col-sm-10">
-				<h1 align="left"><br>Login de Usuario</h1>
-			</article>
-		</section>
-		
-		{include file='encabezado/navegar.html.tpl'}
 		<section class=row>
 						<div class="col-lg-3 col-md-3 col-sm-12 "></div>
 						<div class="col-lg-6 col-md-6 col-sm-12 ">

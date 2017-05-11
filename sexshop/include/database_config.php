@@ -7,6 +7,6 @@
      define ("DATABASE_HOST","localhost"); 
      define ("DATABASE_USER","root"); 
      define ("DATABASE_PASSWD","root");
-     define ("DATABASE_NAME","sexshop");       
+     define ("DATABASE_NAME","sexshop2");       
  }
 ?>

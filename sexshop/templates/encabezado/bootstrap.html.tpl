@@ -6,5 +6,7 @@
 <script src="js/jquery-ui/jquery-ui.js"></script>
 <script src="js/alertify-js/lib/alertify.min.js"></script>
 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
 <link rel="stylesheet" href="js/alertify-js/themes/alertify.core.css" />
 <link rel="stylesheet" href="js/alertify-js/themes/alertify.default.css" id="toggleCSS" />

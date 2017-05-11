@@ -4,6 +4,7 @@
 	require_once dirname(__FILE__)."/php/sesion/sesion.class.php";
 	include("php/login/login.php");
 	require_once dirname(__FILE__)."/include/smarty.php";
+	$oSmarty->assign('titulo','Login');
 	$oSmarty->assign("op","A");
 	$oSmarty->assign("es","A");
 		$a = new sesion();
