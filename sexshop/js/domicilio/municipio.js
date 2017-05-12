@@ -7,6 +7,6 @@ $(document).on('ready', function(){
 			success: function(opciones){
 				$("#municipio").html(opciones);
 			}
-		})
+		});
 	});
 });

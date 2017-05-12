@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-05-10 21:48:13
+/* Smarty version 3.1.30, created on 2017-05-11 19:40:43
   from "/var/www/html/repoGit/sexshop/sexshop/templates/registro.html.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5913d0eda57234_77033696',
+  'unifunc' => 'content_5915048baee4b3_67742325',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '336fc6f1277daa2d03bd3051a061110ca6e71297' => 
     array (
       0 => '/var/www/html/repoGit/sexshop/sexshop/templates/registro.html.tpl',
-      1 => 1494470891,
+      1 => 1494549312,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:encabezado/encabezado.html.tpl' => 1,
   ),
 ),false)) {
-function content_5913d0eda57234_77033696 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5915048baee4b3_67742325 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html xml:lang="es" lang="es">
 <head>
@@ -104,9 +104,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_lsl'] = $__section_lsl_0_saved;
 					<tr><td>Ciudad:</td><td><select id='ciudad' class='form-control' name='ciudad'>
 						<option>Selecciona un municipio</option>
 					</select></td><td></td><td></td></tr>
-					<tr><td>Codigo Postal:</td><td><select id='cp' class='form-control' name='cp'>
-						<option>Selecciona un Ciudad</option>
-					</select>
+					<tr><td>Codigo Postal:</td><td><input type='text' name=cp class='form-control' id='cp'/>
 					</td><td></td><td></td></tr>
 					<tr><td>Direccion:</td><td><input type='text' name='direccion' class='form-control'/></td><td></td><td></td></tr>
 				</table>

@@ -4,6 +4,7 @@
 	{include file="encabezado/bootstrap.html.tpl"}
 	<script src='js/jqueryui_registro.js'></script>
 	<script src='js/datos_usuario/existeEmail.js'></script>
+	<script src='js/datos_usuario/password.js'></script>
 	<script src='js/domicilio/municipio.js'></script>
 	<script src='js/domicilio/ciudad.js'></script>
 </head>
@@ -12,12 +13,12 @@
 	<center>
 	<section class='container>'>
 	
-		<form action='php/registro.php' method='post' id='fm'>
+		<form action='php/registro.php' method='post' id='fm' autocomplete="off">
 			<div id='formulario'>
 				<h3>Datos de usuario</h3>
 				<section>
 				<table>
-					<tr><td>Nombre:</td><td><input type='text' name='nombre' class='form-control'/></td><td></td><td></td></tr>
+					<tr><td>Nombre:</td><td><input type='text' name='nombre' class='form-control' id='nombre'/></td><td></td><td></td></tr>
 					<tr><td>Apellido paterno:</td><td><input type='text' name='paterno' class='form-control'/></td><td></td><td></td></tr>
 					<tr><td>Apellido materno:</td><td><input type='text' name='materno' class='form-control'/></td><td></td><td></td></tr>
 					<tr id='clo'><td>Email:</td><td><input type='text' name='emailA' id='email'class='form-control'/></td><td>Repetir email:</td><td><input type='text' name='emailB' id='emailB' class='form-control'/></td></tr>
@@ -47,12 +48,10 @@
 							<option value=0>Selecciona un estado</option>
 						</select></td><td></td><td></td></tr>
 						
-					<tr><td>Ciudad:</td><td><select id='ciudad' class='form-control' name='ciudad'>
+					<tr><td>Asentamiento:</td><td><select id='ciudad' class='form-control' name='ciudad'>
 						<option>Selecciona un municipio</option>
 					</select></td><td></td><td></td></tr>
-					<tr><td>Codigo Postal:</td><td><select id='cp' class='form-control' name='cp'>
-						<option>Selecciona un Ciudad</option>
-					</select>
+					<tr><td>Codigo Postal:</td><td><input type='text' name=cp class='form-control' id='cp'/>
 					</td><td></td><td></td></tr>
 					<tr><td>Direccion:</td><td><input type='text' name='direccion' class='form-control'/></td><td></td><td></td></tr>
 				</table>
@@ -60,12 +59,36 @@
 			<h3>Crear password</h3>
 				<section>
 				<div class='row'>
+					<div class='col-lg-4'></div>
+					<table class='col-lg-4'><center>
+						<tr><td>Password: </td>
+							<td><input type='password' name='pass1' id='pass1' value='' required ></td>
+							<td>
+								<div id='passR1' title="Guia de creacion de contrasenias">
+								</div>
+							</td>
+							</tr>
+							<tr><td>Password: Repetir </td>
+							<td><input type='password' name='pass2' id='pass2' value='' required >
+							</td>
+							<td>
+								<div id='passR2'>
+								</div>
+							</td>
+						</tr></center>
+					</table>
+					<div class='col-lg-4'></div>
 				</div>
 				</section>
 			<h3>Registrar</h3>
 				<section>
 				<div class='row'>
+					<div class='col-lg-12'>
+						<input type='radio' name='aceptarTerminos' value='Aceptar'> Acepta los <a href="#">terminos y condiciones</a>
+					</div><br>
+					<div class='col-lg-12'><center>
 					<input type='submit' name='{if $modo eq 'registrar'}reg{else}mod{/if}' value='Registrar' class='btn btn-primary'>
+					</center></div>
 				</div>
 			</section>
 		</div>

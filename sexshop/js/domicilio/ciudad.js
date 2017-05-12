@@ -8,4 +8,13 @@ $(document).on('ready', function(){
 			}
 		);
 	});
+	$("#ciudad").change(
+		function(){
+			$.post("php/domicilio/cp.php",
+				  {ciudad:$("#ciudad").val()},
+					function(opcion){
+						$("#cp").val(opcion);
+			});
+		}
+	);
 });
