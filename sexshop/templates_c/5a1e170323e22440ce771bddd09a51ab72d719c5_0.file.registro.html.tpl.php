@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-05-11 22:09:53
+/* Smarty version 3.1.30, created on 2017-05-14 20:12:12
   from "/var/www/html/DosrepoGit/sexshop/sexshop/templates/registro.html.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59152781c0f7a7_75560449',
+  'unifunc' => 'content_5919006c6e7093_71764144',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5a1e170323e22440ce771bddd09a51ab72d719c5' => 
     array (
       0 => '/var/www/html/DosrepoGit/sexshop/sexshop/templates/registro.html.tpl',
-      1 => 1494558591,
+      1 => 1494810724,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:encabezado/encabezado.html.tpl' => 1,
   ),
 ),false)) {
-function content_59152781c0f7a7_75560449 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5919006c6e7093_71764144 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html xml:lang="es" lang="es">
 <head>
@@ -36,6 +36,9 @@ function content_59152781c0f7a7_75560449 (Smarty_Internal_Template $_smarty_tpl)
 >
 	<?php echo '<script'; ?>
  src='js/datos_usuario/existeEmail.js'><?php echo '</script'; ?>
+>
+	<?php echo '<script'; ?>
+ src='js/datos_usuario/reg.js'><?php echo '</script'; ?>
 >
 	<?php echo '<script'; ?>
  src='js/datos_usuario/password.js'><?php echo '</script'; ?>
@@ -54,7 +57,7 @@ function content_59152781c0f7a7_75560449 (Smarty_Internal_Template $_smarty_tpl)
 	<center>
 	<section class='container>'>
 	
-		<form action='php/registro.php' method='post' id='fm' autocomplete="off">
+		<form method='post' id='fm' autocomplete="off">
 			<div id='formulario'>
 				<h3>Datos de usuario</h3>
 				<section>
@@ -65,6 +68,7 @@ function content_59152781c0f7a7_75560449 (Smarty_Internal_Template $_smarty_tpl)
 					<tr id='clo'><td>Email:</td><td><input type='text' name='emailA' id='email'class='form-control'/></td><td>Repetir email:</td><td><input type='text' name='emailB' id='emailB' class='form-control'/></td></tr>
 					<tr><td>Telefono:</td><td><input type='text' name='telefono' class='form-control'/></td><td></td><td></td></tr>
 					<tr><td>Sexo:</td><td></td><td>F:<input type='radio' name='sexo' value='F' class='form-control'></td><td>M: <input type='radio' name='sexo' value='M' class='form-control'></td></tr>
+					<tr><td>Fecha de nacimiento:</td><td></td><td><input type='date' name='nacimiento' class='form-control' id='nacimiento'></td><td></td></tr>
 				</table>
 				</section>
 			<h3>Direccion</h3>
@@ -139,15 +143,13 @@ $_smarty_tpl->tpl_vars['__smarty_section_lsl'] = $__section_lsl_0_saved;
 			<h3>Registrar</h3>
 				<section>
 				<div class='row'>
-					<div class='col-lg-12'>
-						<input type='radio' name='aceptarTerminos' value='Aceptar'> Acepta los <a href="#">terminos y condiciones</a>
-					</div><br>
 					<div class='col-lg-12'><center>
-					<input type='submit' name='<?php if ($_smarty_tpl->tpl_vars['modo']->value == 'registrar') {?>reg<?php } else { ?>mod<?php }?>' value='Registrar' class='btn btn-primary'>
-					</center></div>
+					<button id="registro" class='btn btn-primary'>Registrar nuevo usuario</button>
+					<!--<input type='submit' name='<?php if ($_smarty_tpl->tpl_vars['modo']->value == 'registrar') {?>reg<?php } else { ?>mod<?php }?>' value='Registrar' class='btn btn-primary'>
+					--></center></div>
 				</div>
 			</section>
-		</div>
+		</div><div id='data' title="Mensaje de errores"></div>
 	</form>
 	<section>
 	</center>

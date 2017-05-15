@@ -4,6 +4,7 @@
 	{include file="encabezado/bootstrap.html.tpl"}
 	<script src='js/jqueryui_registro.js'></script>
 	<script src='js/datos_usuario/existeEmail.js'></script>
+	<script src='js/datos_usuario/reg.js'></script>
 	<script src='js/datos_usuario/password.js'></script>
 	<script src='js/domicilio/municipio.js'></script>
 	<script src='js/domicilio/ciudad.js'></script>
@@ -13,7 +14,7 @@
 	<center>
 	<section class='container>'>
 	
-		<form action='php/registro.php' method='post' id='fm' autocomplete="off">
+		<form method='post' id='fm' autocomplete="off">
 			<div id='formulario'>
 				<h3>Datos de usuario</h3>
 				<section>
@@ -24,6 +25,7 @@
 					<tr id='clo'><td>Email:</td><td><input type='text' name='emailA' id='email'class='form-control'/></td><td>Repetir email:</td><td><input type='text' name='emailB' id='emailB' class='form-control'/></td></tr>
 					<tr><td>Telefono:</td><td><input type='text' name='telefono' class='form-control'/></td><td></td><td></td></tr>
 					<tr><td>Sexo:</td><td></td><td>F:<input type='radio' name='sexo' value='F' class='form-control'></td><td>M: <input type='radio' name='sexo' value='M' class='form-control'></td></tr>
+					<tr><td>Fecha de nacimiento:</td><td></td><td><input type='date' name='nacimiento' class='form-control' id='nacimiento'></td><td></td></tr>
 				</table>
 				</section>
 			<h3>Direccion</h3>
@@ -83,15 +85,13 @@
 			<h3>Registrar</h3>
 				<section>
 				<div class='row'>
-					<div class='col-lg-12'>
-						<input type='radio' name='aceptarTerminos' value='Aceptar'> Acepta los <a href="#">terminos y condiciones</a>
-					</div><br>
 					<div class='col-lg-12'><center>
-					<input type='submit' name='{if $modo eq 'registrar'}reg{else}mod{/if}' value='Registrar' class='btn btn-primary'>
-					</center></div>
+					<button id="registro" class='btn btn-primary'>Registrar nuevo usuario</button>
+					<!--<input type='submit' name='{if $modo eq 'registrar'}reg{else}mod{/if}' value='Registrar' class='btn btn-primary'>
+					--></center></div>
 				</div>
 			</section>
-		</div>
+		</div><div id='data' title="Mensaje de errores"></div>
 	</form>
 	<section>
 	</center>
