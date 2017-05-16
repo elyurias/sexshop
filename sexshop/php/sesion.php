@@ -7,7 +7,7 @@
 	$status = False;
 	if(isset($_SESSION['email'])){
 		$oSmarty->assign("es","op");
-		$usu = $db->GetAll("SELECT * FROM usuario WHERE Vemail_usuario = '".$_SESSION['email']."'");
+		$usu = $db->GetAll("SELECT * FROM usuarioDetalle WHERE Vemail_usuario = '".$_SESSION['email']."'");
 		$oSmarty->assign('usu',$usu);
 		$status = True;
 	}else{
