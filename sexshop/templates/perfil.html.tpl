@@ -79,7 +79,7 @@
 					<label>Nombre </label><input type='text' name='nombre' id='nombre' value="{$usu[st].Vnombre_usuario}" required>
 					<label>Apellido paterno </label><input type='text' name='paterno' id='paterno' value="{$usu[st].Va_paterno_usuario}" required>
 					<label>Apellido materno </label><input type='text' name='materno' id='materno' value="{$usu[st].Va_materno_usuario}" required>
-					<label>Fecha de nacimiento</label><input type='date' name='nacimiento' id='nacimiento' value="{$usu[st].Df_nacimiento_usuario}" required>
+					<label>Fecha de nacimiento</label><input type='text' name='nacimiento' id='nacimiento' value="{$usu[st].Df_nacimiento_usuario}" required>
 					<label>Telefono </label><input type='text' name='telefono' id='telefono' value="{$usu[st].Btelefono_usuario}" required>
 					<label>Sexo </label> F:<input type='radio' name='sexo' id='sexo' value="F" 
 					{if $usu[st].Csexo_usuario eq 'F'}

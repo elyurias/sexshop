@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-05-14 20:12:12
+/* Smarty version 3.1.30, created on 2017-05-15 19:45:01
   from "/var/www/html/DosrepoGit/sexshop/sexshop/templates/registro.html.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5919006c6e7093_71764144',
+  'unifunc' => 'content_591a4b8d951e99_75860180',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5a1e170323e22440ce771bddd09a51ab72d719c5' => 
     array (
       0 => '/var/www/html/DosrepoGit/sexshop/sexshop/templates/registro.html.tpl',
-      1 => 1494810724,
+      1 => 1494816876,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:encabezado/encabezado.html.tpl' => 1,
   ),
 ),false)) {
-function content_5919006c6e7093_71764144 (Smarty_Internal_Template $_smarty_tpl) {
+function content_591a4b8d951e99_75860180 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html xml:lang="es" lang="es">
 <head>
@@ -68,7 +68,7 @@ function content_5919006c6e7093_71764144 (Smarty_Internal_Template $_smarty_tpl)
 					<tr id='clo'><td>Email:</td><td><input type='text' name='emailA' id='email'class='form-control'/></td><td>Repetir email:</td><td><input type='text' name='emailB' id='emailB' class='form-control'/></td></tr>
 					<tr><td>Telefono:</td><td><input type='text' name='telefono' class='form-control'/></td><td></td><td></td></tr>
 					<tr><td>Sexo:</td><td></td><td>F:<input type='radio' name='sexo' value='F' class='form-control'></td><td>M: <input type='radio' name='sexo' value='M' class='form-control'></td></tr>
-					<tr><td>Fecha de nacimiento:</td><td></td><td><input type='date' name='nacimiento' class='form-control' id='nacimiento'></td><td></td></tr>
+					<tr><td>Fecha de nacimiento:</td><td></td><td><input type='text' name='nacimiento' class='form-control' id='nacimiento'></td><td></td></tr>
 				</table>
 				</section>
 			<h3>Direccion</h3>

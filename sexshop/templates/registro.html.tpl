@@ -25,7 +25,7 @@
 					<tr id='clo'><td>Email:</td><td><input type='text' name='emailA' id='email'class='form-control'/></td><td>Repetir email:</td><td><input type='text' name='emailB' id='emailB' class='form-control'/></td></tr>
 					<tr><td>Telefono:</td><td><input type='text' name='telefono' class='form-control'/></td><td></td><td></td></tr>
 					<tr><td>Sexo:</td><td></td><td>F:<input type='radio' name='sexo' value='F' class='form-control'></td><td>M: <input type='radio' name='sexo' value='M' class='form-control'></td></tr>
-					<tr><td>Fecha de nacimiento:</td><td></td><td><input type='date' name='nacimiento' class='form-control' id='nacimiento'></td><td></td></tr>
+					<tr><td>Fecha de nacimiento:</td><td></td><td><input type='text' name='nacimiento' class='form-control' id='nacimiento'></td><td></td></tr>
 				</table>
 				</section>
 			<h3>Direccion</h3>
