@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-05-15 22:54:29
+/* Smarty version 3.1.30, created on 2017-05-20 22:47:03
   from "/var/www/html/sexshop/sexshop/templates/perfil.html.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_591a77f51a3f48_92201873',
+  'unifunc' => 'content_59210db734f0c9_92705272',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '950e41c1b7eaff43045239ce9b266caa26cd11d7' => 
     array (
       0 => '/var/www/html/sexshop/sexshop/templates/perfil.html.tpl',
-      1 => 1494904934,
+      1 => 1495338420,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:encabezado/encabezado.html.tpl' => 1,
   ),
 ),false)) {
-function content_591a77f51a3f48_92201873 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59210db734f0c9_92705272 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
 	<head>
@@ -118,6 +118,73 @@ for ($__section_st_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_st'
 							<div class='col-lg-12'>
 								<button class='btn btn-primary' id="modificar">Modificar</button>
 							</div>
+						</div>
+						<div class='row'>
+							<div class='col-lg-12 col-md-12'>
+								<legend>Direccion del usuario</legend>
+							</div>
+						</div>
+						<?php
+$__section_sss_1_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_sss']) ? $_smarty_tpl->tpl_vars['__smarty_section_sss'] : false;
+$__section_sss_1_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['dom']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_sss_1_total = $__section_sss_1_loop;
+$_smarty_tpl->tpl_vars['__smarty_section_sss'] = new Smarty_Variable(array());
+if ($__section_sss_1_total != 0) {
+for ($__section_sss_1_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_sss']->value['index'] = 0; $__section_sss_1_iteration <= $__section_sss_1_total; $__section_sss_1_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_sss']->value['index']++){
+?>
+						<div class='row'>
+							<div class='col-lg-6 col-md-6'>
+								<h5>Estado</h5>
+							</div>
+							<div class='col-lg-6 col-md-6'>
+								<h7><?php echo $_smarty_tpl->tpl_vars['dom']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sss']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sss']->value['index'] : null)]['estado'];?>
+</h7>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='col-lg-6 col-md-6'>
+								<h5>Municipio</h5>
+							</div>
+							<div class='col-lg-6 col-md-6'>
+								<h7><?php echo $_smarty_tpl->tpl_vars['dom']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sss']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sss']->value['index'] : null)]['municipio'];?>
+</h7>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='col-lg-6 col-md-6'>
+								<h5>Asentamiento</h5>
+							</div>
+							<div class='col-lg-6 col-md-6'>
+								<h7><?php echo $_smarty_tpl->tpl_vars['dom']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sss']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sss']->value['index'] : null)]['asentamiento'];?>
+</h7>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='col-lg-6 col-md-6'>
+								<h5>Codigo postal</h5>
+							</div>
+							<div class='col-lg-6 col-md-6'>
+								<h7><?php echo $_smarty_tpl->tpl_vars['dom']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sss']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sss']->value['index'] : null)]['cp'];?>
+</h7>
+							</div>
+						</div>
+						<?php
+}
+}
+if ($__section_sss_1_saved) {
+$_smarty_tpl->tpl_vars['__smarty_section_sss'] = $__section_sss_1_saved;
+}
+?>
+						<div class='row'>
+							<div class='col-lg-6 col-md-6'>
+								<h5>Direccion</h5>
+							</div>
+							<div class='col-lg-6 col-md-6'>
+								<h7><?php echo $_smarty_tpl->tpl_vars['usu']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_st']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_st']->value['index'] : null)]['Vdireccion_usuario'];?>
+</h7>
+							</div>
+						</div>
+						<div class='row'>
 							<div class='col-lg-12'>
 								<button class='btn btn-primary' id="modificar2">Modificar Direccion</button>
 							</div>
@@ -161,7 +228,7 @@ for ($__section_st_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_st'
 			</div>
 			
 			<div id="dialog2" title="Modificar datos de usuario (Direccion)">
-				<form id='fm2' method='POST'>
+				<form id='fm2' method='POST' onsubmit="return abra();">
 					<input type="hidden" name='id' value='<?php echo $_smarty_tpl->tpl_vars['usu']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_st']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_st']->value['index'] : null)]['id_usuario'];?>
 '>
 					<input type="hidden" name='mun' id='mun' value='<?php echo $_smarty_tpl->tpl_vars['usu']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_st']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_st']->value['index'] : null)]['idMunicipio'];?>
@@ -173,12 +240,12 @@ for ($__section_st_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_st'
 						<select id='estado' class='form-control' name='estado'>
 							<option>Selecciona una opcion</option>
 							<?php
-$__section_lsl_1_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_lsl']) ? $_smarty_tpl->tpl_vars['__smarty_section_lsl'] : false;
-$__section_lsl_1_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['estado']->value) ? count($_loop) : max(0, (int) $_loop));
-$__section_lsl_1_total = $__section_lsl_1_loop;
+$__section_lsl_2_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_lsl']) ? $_smarty_tpl->tpl_vars['__smarty_section_lsl'] : false;
+$__section_lsl_2_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['estado']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_lsl_2_total = $__section_lsl_2_loop;
 $_smarty_tpl->tpl_vars['__smarty_section_lsl'] = new Smarty_Variable(array());
-if ($__section_lsl_1_total != 0) {
-for ($__section_lsl_1_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_lsl']->value['index'] = 0; $__section_lsl_1_iteration <= $__section_lsl_1_total; $__section_lsl_1_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_lsl']->value['index']++){
+if ($__section_lsl_2_total != 0) {
+for ($__section_lsl_2_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_lsl']->value['index'] = 0; $__section_lsl_2_iteration <= $__section_lsl_2_total; $__section_lsl_2_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_lsl']->value['index']++){
 ?>
 								<option value='<?php echo $_smarty_tpl->tpl_vars['estado']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_lsl']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_lsl']->value['index'] : null)]['idEstado'];?>
 ' 
@@ -192,8 +259,8 @@ for ($__section_lsl_1_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_ls
 							<?php
 }
 }
-if ($__section_lsl_1_saved) {
-$_smarty_tpl->tpl_vars['__smarty_section_lsl'] = $__section_lsl_1_saved;
+if ($__section_lsl_2_saved) {
+$_smarty_tpl->tpl_vars['__smarty_section_lsl'] = $__section_lsl_2_saved;
 }
 ?>
 						</select>

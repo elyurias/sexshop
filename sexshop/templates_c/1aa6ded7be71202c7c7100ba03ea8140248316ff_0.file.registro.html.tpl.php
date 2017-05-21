@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-05-15 22:53:40
+/* Smarty version 3.1.30, created on 2017-05-20 22:48:42
   from "/var/www/html/sexshop/sexshop/templates/registro.html.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_591a77c4898629_20139907',
+  'unifunc' => 'content_59210e1af143f9_67298162',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1aa6ded7be71202c7c7100ba03ea8140248316ff' => 
     array (
       0 => '/var/www/html/sexshop/sexshop/templates/registro.html.tpl',
-      1 => 1494816876,
+      1 => 1495336640,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:encabezado/encabezado.html.tpl' => 1,
   ),
 ),false)) {
-function content_591a77c4898629_20139907 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59210e1af143f9_67298162 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html xml:lang="es" lang="es">
 <head>
@@ -38,7 +38,7 @@ function content_591a77c4898629_20139907 (Smarty_Internal_Template $_smarty_tpl)
  src='js/datos_usuario/existeEmail.js'><?php echo '</script'; ?>
 >
 	<?php echo '<script'; ?>
- src='js/datos_usuario/reg.js'><?php echo '</script'; ?>
+ src='js/datos_usuario/reg2.js'><?php echo '</script'; ?>
 >
 	<?php echo '<script'; ?>
  src='js/datos_usuario/password.js'><?php echo '</script'; ?>
@@ -56,8 +56,7 @@ function content_591a77c4898629_20139907 (Smarty_Internal_Template $_smarty_tpl)
 
 	<center>
 	<section class='container>'>
-	
-		<form method='post' id='fm' autocomplete="off">
+		<form method='post' id='fm' autocomplete="off" onsubmit="return validar();">
 			<div id='formulario'>
 				<h3>Datos de usuario</h3>
 				<section>
@@ -79,7 +78,7 @@ function content_591a77c4898629_20139907 (Smarty_Internal_Template $_smarty_tpl)
 										  </select></td><td></td><td></td></tr>
 					<tr><td>Estado:</td><td>
 						<select id='estado' class='form-control' name='estado'>
-							<option>Selecciona una opcion</option>
+							<option value=0>Selecciona una opcion</option>
 							<?php
 $__section_lsl_0_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_lsl']) ? $_smarty_tpl->tpl_vars['__smarty_section_lsl'] : false;
 $__section_lsl_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['estado']->value) ? count($_loop) : max(0, (int) $_loop));
@@ -109,7 +108,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_lsl'] = $__section_lsl_0_saved;
 						</select></td><td></td><td></td></tr>
 						
 					<tr><td>Asentamiento:</td><td><select id='ciudad' class='form-control' name='ciudad'>
-						<option>Selecciona un municipio</option>
+						<option value=0>Selecciona un municipio</option>
 					</select></td><td></td><td></td></tr>
 					<tr><td>Codigo Postal:</td><td><input type='text' name=cp class='form-control' id='cp'/>
 					</td><td></td><td></td></tr>
@@ -122,14 +121,14 @@ $_smarty_tpl->tpl_vars['__smarty_section_lsl'] = $__section_lsl_0_saved;
 					<div class='col-lg-4'></div>
 					<table class='col-lg-4'><center>
 						<tr><td>Password: </td>
-							<td><input type='password' name='pass1' id='pass1' value='' required ></td>
+							<td><input type='password' name='pass1' id='pass1' value='' class='form-control' required ></td>
 							<td>
 								<div id='passR1' title="Guia de creacion de contrasenias">
 								</div>
 							</td>
 							</tr>
 							<tr><td>Password: Repetir </td>
-							<td><input type='password' name='pass2' id='pass2' value='' required >
+							<td><input type='password' name='pass2' id='pass2' value='' class='form-control' required >
 							</td>
 							<td>
 								<div id='passR2'>

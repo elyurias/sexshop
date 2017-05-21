@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-05-15 22:53:40
+/* Smarty version 3.1.30, created on 2017-05-20 15:26:51
   from "/var/www/html/sexshop/sexshop/templates/encabezado/encabezado.html.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_591a77c4922b04_04903169',
+  'unifunc' => 'content_5920a68ba9b0f6_53218111',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_591a77c4922b04_04903169 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5920a68ba9b0f6_53218111 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <center>
 <section class='container-fluid'>

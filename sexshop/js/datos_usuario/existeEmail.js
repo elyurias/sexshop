@@ -1,9 +1,18 @@
 var ti = 0;
 $(document).on('ready', function(){
+		$('#email').keyup(function(){
+			$("#email").css("background-color","white");
+		});
+		$('#ciudad').change(function(){
+			$("#ciudad").css("background-color","white");
+		});
+		$('#nacimiento').keyup(function(){
+			$("#nacimiento").css("background-color","white");
+		});
 		$('#email').focusout(function(event){
 				$.post("php/usuario/existeEmail.php",{emailA : $('#email').val()},function(data){
 					var t = $("#email").val().indexOf("@");
-					if($("#email").val().length != 0 && t != -1){
+					if($("#email").val().length != 0 && t != -1 && $("#email").val().length > 4){
 						if(data=='Disponible'){
 							ti = 1;
 							 alertify.alert("<b>Mensaje de Servidor</b><br> Email Disponible", function () {
@@ -17,6 +26,8 @@ $(document).on('ready', function(){
 								//por ejemplo -->  location.href = 'http://www.google.es/';  <-- Redireccionamos a GOOGLE.
 							});
 						}
+					}else{
+						 ti = 0;
 					}
 				});
 		});
@@ -24,7 +35,7 @@ $(document).on('ready', function(){
 			if($("#email").val() == $("#emailB").val()){
 				alertify.success("Email correctamente repetido");
 			}else{
-				alertify.error("los emails no coinciden");
+				alertify.error("Los emails no coinciden");
 			}
 		});
 	});

@@ -10,12 +10,25 @@ $(function() {
     return false;
   });
 });
+function abra(){
+	if(parseInt($("#ciudad").val())==0){
+		$("#ciudad").css("background-color","red");
+		return false;
+	}else{
+		$("#ciudad").css("background-color","white");
+		return true;
+	}
+}
 $(document).on('ready', function(){
 	$("#fm2").submit(function(){	
-			$.post("php/usuario/mod2.php",$("#fm2").serialize(),
-				function(data){
-					alert(data);
-				}
-			);
+			if(abra()==true){
+				$.post("php/usuario/mod2.php",$("#fm2").serialize(),
+					function(data){
+						alert(data);
+					}
+				);
+			}else{
+				
+			}
 		});
 });

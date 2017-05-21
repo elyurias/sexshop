@@ -66,6 +66,55 @@
 							<div class='col-lg-12'>
 								<button class='btn btn-primary' id="modificar">Modificar</button>
 							</div>
+						</div>
+						<div class='row'>
+							<div class='col-lg-12 col-md-12'>
+								<legend>Direccion del usuario</legend>
+							</div>
+						</div>
+						{section name=sss loop=$dom}
+						<div class='row'>
+							<div class='col-lg-6 col-md-6'>
+								<h5>Estado</h5>
+							</div>
+							<div class='col-lg-6 col-md-6'>
+								<h7>{$dom[sss].estado}</h7>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='col-lg-6 col-md-6'>
+								<h5>Municipio</h5>
+							</div>
+							<div class='col-lg-6 col-md-6'>
+								<h7>{$dom[sss].municipio}</h7>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='col-lg-6 col-md-6'>
+								<h5>Asentamiento</h5>
+							</div>
+							<div class='col-lg-6 col-md-6'>
+								<h7>{$dom[sss].asentamiento}</h7>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='col-lg-6 col-md-6'>
+								<h5>Codigo postal</h5>
+							</div>
+							<div class='col-lg-6 col-md-6'>
+								<h7>{$dom[sss].cp}</h7>
+							</div>
+						</div>
+						{/section}
+						<div class='row'>
+							<div class='col-lg-6 col-md-6'>
+								<h5>Direccion</h5>
+							</div>
+							<div class='col-lg-6 col-md-6'>
+								<h7>{$usu[st].Vdireccion_usuario}</h7>
+							</div>
+						</div>
+						<div class='row'>
 							<div class='col-lg-12'>
 								<button class='btn btn-primary' id="modificar2">Modificar Direccion</button>
 							</div>
@@ -102,7 +151,7 @@
 			</div>
 			
 			<div id="dialog2" title="Modificar datos de usuario (Direccion)">
-				<form id='fm2' method='POST'>
+				<form id='fm2' method='POST' onsubmit="return abra();">
 					<input type="hidden" name='id' value='{$usu[st].id_usuario}'>
 					<input type="hidden" name='mun' id='mun' value='{$usu[st].idMunicipio}'>
 					<input type="hidden" name='nim' id='idn' value='{$usu[st].id_direccion}'>

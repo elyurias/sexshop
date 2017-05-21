@@ -4,7 +4,7 @@
 	{include file="encabezado/bootstrap.html.tpl"}
 	<script src='js/jqueryui_registro.js'></script>
 	<script src='js/datos_usuario/existeEmail.js'></script>
-	<script src='js/datos_usuario/reg.js'></script>
+	<script src='js/datos_usuario/reg2.js'></script>
 	<script src='js/datos_usuario/password.js'></script>
 	<script src='js/domicilio/municipio.js'></script>
 	<script src='js/domicilio/ciudad.js'></script>
@@ -13,8 +13,7 @@
 	{include file='encabezado/encabezado.html.tpl'}
 	<center>
 	<section class='container>'>
-	
-		<form method='post' id='fm' autocomplete="off">
+		<form method='post' id='fm' autocomplete="off" onsubmit="return validar();">
 			<div id='formulario'>
 				<h3>Datos de usuario</h3>
 				<section>
@@ -36,7 +35,7 @@
 										  </select></td><td></td><td></td></tr>
 					<tr><td>Estado:</td><td>
 						<select id='estado' class='form-control' name='estado'>
-							<option>Selecciona una opcion</option>
+							<option value=0>Selecciona una opcion</option>
 							{section name=lsl loop=$estado}
 								<option value='{$estado[lsl].idEstado}'>
 									{$estado[lsl].estado}
@@ -51,7 +50,7 @@
 						</select></td><td></td><td></td></tr>
 						
 					<tr><td>Asentamiento:</td><td><select id='ciudad' class='form-control' name='ciudad'>
-						<option>Selecciona un municipio</option>
+						<option value=0>Selecciona un municipio</option>
 					</select></td><td></td><td></td></tr>
 					<tr><td>Codigo Postal:</td><td><input type='text' name=cp class='form-control' id='cp'/>
 					</td><td></td><td></td></tr>
@@ -64,14 +63,14 @@
 					<div class='col-lg-4'></div>
 					<table class='col-lg-4'><center>
 						<tr><td>Password: </td>
-							<td><input type='password' name='pass1' id='pass1' value='' required ></td>
+							<td><input type='password' name='pass1' id='pass1' value='' class='form-control' required ></td>
 							<td>
 								<div id='passR1' title="Guia de creacion de contrasenias">
 								</div>
 							</td>
 							</tr>
 							<tr><td>Password: Repetir </td>
-							<td><input type='password' name='pass2' id='pass2' value='' required >
+							<td><input type='password' name='pass2' id='pass2' value='' class='form-control' required >
 							</td>
 							<td>
 								<div id='passR2'>

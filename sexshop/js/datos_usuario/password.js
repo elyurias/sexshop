@@ -1,6 +1,7 @@
 var datoCorrectoVerificar = "";
 $(document).on("ready",function(){
 	$("#pass1").keyup(function(event){
+		$("#pass1").css("background-color","white");
 		var dato = $("#pass1").val();
 		var nums = '0123456789';
 		var letras = "<div class='alert alert-danger'>Al menos una letra mayuscula</div>";
