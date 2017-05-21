@@ -2,8 +2,7 @@
 	ini_set('display_errors', 1);
 	require_once dirname(__FILE__)."../../../include/database.php";
 	$db = getDb();
-	$p = $db->getAll("SELECT * FROM municipio WHERE idEstado = ".$_POST['idEstado']." ORDER BY (municipio)");
-	echo "SELECT * FROM municipio WHERE idEstado = ".$_POST['idEstado']." ORDER BY (municipio)";
+	$p = $db->getAll("SELECT * FROM listaMunicipio WHERE idEstado = ".$_POST['idEstado']." ORDER BY (municipio)");
 	$opciones = '<option value=0>Selecciona</option>';
 	foreach($p as $row){
 		$dataSS = "";
