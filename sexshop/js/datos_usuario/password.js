@@ -20,7 +20,10 @@ $(document).on("ready",function(){
 			tamanioC = "<div class='alert alert-success'>Sintaxis correcta (Tamano)</div>";
 		}
 		$("#passR1").html(letras+numeros+tamanioC);
-		$("#passR1").dialog();
+		$("#passR1").dialog({position: {
+                  my: "center center" ,
+                  at: "right top"
+               }});
 		$("#pass1").focus();
 	});
 	$("#pass2").keyup(function(event){

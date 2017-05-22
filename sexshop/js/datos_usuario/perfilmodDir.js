@@ -22,7 +22,7 @@ function abra(){
 $(document).on('ready', function(){
 	$("#fm2").submit(function(){	
 			if(abra()==true){
-				$.post("php/usuario/mod2.php",$("#fm2").serialize(),
+				$.post("php/usuario/mod2.php",{id:$('#ide').val(),ciudad:$('#ciudad').val(),dirusu:$('#dirusu').val()},
 					function(data){
 						alert(data);
 					}

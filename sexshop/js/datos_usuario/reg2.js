@@ -18,7 +18,7 @@ $(document).on('ready',function(){
 		cadena+= ("<div class='alert alert-danger'>Menor de edad</div>");
 		$("#nacimiento").css("background-color","red");
 	}
-	if($("#pass1").val()==$("#pass2").val() && $("#pass1").val().length < 4){
+	if($("#pass1").val()!=$("#pass2").val() || $("#pass1").val().length < 4){
 		cadena+= ("<div class='alert alert-danger'>Error en password verifique su estructura</div>");
 		$("#pass1").css("background-color","red");
 	}
@@ -28,13 +28,12 @@ $(document).on('ready',function(){
 		//alert(cadena);
 	}else{
 		var estadoDe = confirm("Desea registrarse como nuevo usuario, aceptando, usted adepta todas las politicas de privacidad, etc.. etc..");
-		alert(estadoDe);
 		if(estadoDe == true){
 			$.post("php/usuario/reg.php",$( "#fm" ).serialize(),
 				function(data){
-					alert(data);
 				}
 			);
+			window.location = "login.php";
 		}else{
 		
 		}
